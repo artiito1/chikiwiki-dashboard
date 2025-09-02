@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.not_number {
+  position: relative;
+}
+.not_number::after {
+  position: absolute;
+  content: "10";
+  width: 20px;
+  font-size: 14px;
+  height: 20px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  top: -1px;
+  right: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dot {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pattern {
+  background: url("/images/login_pattern.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pattern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  background-color: #000000;
+  opacity: 0.5;
+}
